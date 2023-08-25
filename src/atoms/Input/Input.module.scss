@@ -1,0 +1,37 @@
+@import "../../styles/all.scss";
+
+.input {
+  background-color: $white;
+  border-radius: 10px;
+  border: 1px solid $red-500;
+  height: 45px;
+  // width: 400px;
+  width: 100%;
+  max-width: 400px;
+  padding-left: 16px;
+  font-size: 16px;
+
+  &::after {
+    content: "";
+  }
+
+  &::placeholder {
+    font-weight: 300;
+  }
+
+  &[data-default="false"] {
+    border-color: $orange-500;
+
+    &:focus,
+    &:hover {
+      border-bottom-color: $orange-500;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom-color: $red-500;
+  }
+}
