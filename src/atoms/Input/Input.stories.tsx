@@ -4,6 +4,13 @@ import { Input } from "./Input";
 const meta: Meta<typeof Input> = {
     component: Input,
     tags: ["autodocs"],
+    parameters: {
+        docs: {
+          description: {
+            component: "Input utilizados no projeto"
+          }
+        }
+      }
 }
 export default meta;
 
