@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Icon.module.scss";
 
-interface IconProps {
+export interface IconProps {
   sourceIcon:
     | "/camera-movie.svg"
     | "/error.svg"
