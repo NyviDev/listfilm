@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.button {
+  background: transparent;
+  cursor: pointer;
+  color: $gray-100;
+
+  &[data-type="rate"],
+  &[data-type="login"],
+  &[data-type="register"] {
+    width: 100%;
+    max-width: 225px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &[data-type="login"],
+  &[data-type="register"] {
+    height: 50px;
+    font-size: 20px;
+    // border: 2px solid $black;
+  }
+
+  &[data-type="rate"] {
+    background-color: $red-bg;
+    height: 30px;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $red-200;
+    }
+  }
+
+  &[data-type="login"] {
+    background-color: $orange-500;
+    &:hover {
+      background-color: $orange-300;
+    }
+  }
+  &[data-type="register"] {
+    background-color: $red-500;
+    &:hover {
+      background-color: $red-300;
+    }
+  }
+}
