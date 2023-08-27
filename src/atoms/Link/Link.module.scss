@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.link {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+
+  &[data-color="white"] {
+    color: $white;
+  }
+
+  &[data-color="black"] {
+    color: $black;
+  }
+
+  &[data-externalLink="true"] {
+    font-size: 12px;
+  }
+
+  &[data-externalLink="false"] {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
