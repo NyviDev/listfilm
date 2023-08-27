@@ -9,11 +9,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  margin: 20px;
+  background-color: rgb(204, 204, 204);
+}
+
 ol,
 ul {
   list-style: none;
 }
 
-body {
-  margin: 20px;
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 }
