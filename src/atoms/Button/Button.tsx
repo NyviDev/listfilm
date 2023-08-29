@@ -9,16 +9,12 @@ interface ButtonProps {
 }
 
 export const Button = ({ content, type, iconArgs }: ButtonProps) => {
-  console.log(iconArgs);
-  const alt = iconArgs?.alt;
-  console.log(alt);
   return (
     <button className={styles.button} data-type={type}>
       {type == "icon" ? (
         <Icon
-          alt={iconArgs!.alt}
           size={iconArgs!.size}
-          sourceIcon={iconArgs!.sourceIcon}
+          source={iconArgs!.source}
         />
       ) : (
         content
