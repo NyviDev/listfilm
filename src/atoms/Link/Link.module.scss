@@ -2,6 +2,11 @@
 
 .link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+
   &:visited {
     color: inherit;
   }
@@ -16,12 +21,12 @@
 
   &[data-externalLink="true"] {
     font-size: 12px;
+    border: 1px solid $orange-300;
+    padding: 5px 12px;
+    border-radius: 10px;
   }
 
   &[data-externalLink="false"] {
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
   }
 }

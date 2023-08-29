@@ -18,34 +18,21 @@ export const Link = ({
   iconArgs,
 }: LinkProps) => {
   return (
-    <>
-      {externalLink ? (
-        <a
-          className={styles.link}
-          href={href}
-          target="_blank"
-          data-color={color}
-          data-externalLink={externalLink}
-        >
-          {content}
-        </a>
-      ) : (
-        <a
-          className={styles.link}
-          href={href}
-          data-color={color}
-          data-externalLink={externalLink}
-        >
-          {iconArgs && (
-            <Icon
-              alt={iconArgs.alt}
-              size={iconArgs.size}
-              sourceIcon={iconArgs.sourceIcon}
-            />
-          )}
-          {content}
-        </a>
+    <a
+      className={styles.link}
+      href={href}
+      target={externalLink ? "_blank" : "_self"}
+      data-color={color}
+      data-externalLink={externalLink}
+    >
+      {iconArgs && (
+        <Icon
+          alt={iconArgs.alt}
+          size={iconArgs.size}
+          sourceIcon={iconArgs.sourceIcon}
+        />
       )}
-    </>
+      {content}
+    </a>
   );
 };
