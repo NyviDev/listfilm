@@ -18,30 +18,26 @@ type Story = StoryObj<typeof Icon>;
 
 export const Small: Story = {
   args: {
-    alt: "Pipoca",
-    sourceIcon: "/popcorn.svg",
-    size: "15",
+    source: "/popcorn.svg",
+    size: "small",
   },
 };
 export const Normal: Story = {
   args: {
-    alt: "Estrela laranja",
-    sourceIcon: "/fill-star.svg",
-    size: "20",
+    source: "/fill-star.svg",
+    size: "normal",
   },
 };
 
 export const Medium: Story = {
   args: {
-    alt: "Pipoca",
-    sourceIcon: "/popcorn-orange.svg",
-    size: "25",
+    source: "/popcorn-orange.svg",
+    size: "medium",
   },
 };
 export const Large: Story = {
   args: {
-    alt: "Saída",
-    sourceIcon: "/exit.svg",
-    size: "35",
+    source: "/exit.svg",
+    size: "large",
   },
 };
