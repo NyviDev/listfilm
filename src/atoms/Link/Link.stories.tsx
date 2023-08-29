@@ -52,9 +52,8 @@ export const ExternalIcon: Story = {
     externalLink: false,
     href: "https://www.google.com",
     iconArgs: {
-      alt: "Lista de assistidos",
-      size: "35",
-      sourceIcon: "/eye.svg",
+      size: "large",
+      source: "/eye.svg",
     },
   },
 };

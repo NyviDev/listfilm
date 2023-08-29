@@ -1,9 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import React, { ComponentType } from "react";
 import styles from "./Icon.module.scss";
-
+import dynamic from "next/dynamic";
 export interface IconProps {
-  sourceIcon:
+  source:
     | "/camera-movie.svg"
     | "/error.svg"
     | "/exit.svg"
@@ -15,18 +14,15 @@ export interface IconProps {
     | "/star-orange.svg"
     | "/star-white.svg"
     | "/success.svg";
-  alt: string;
-  size: "15" | "20" | "25" | "35";
+  size: "small" | "normal" | "medium" | "large";
 }
 
-export const Icon = ({ alt, sourceIcon, size }: IconProps) => {
+export const Icon = ({ source, size }: IconProps) => {
+  const ImageSVG: ComponentType<{ className: string }> = dynamic(
+    () => import(`../../assets${source}`)
+  );
+
   return (
-    <Image
-      width={size}
-      height={size}
-      className={styles.icon}
-      src={sourceIcon}
-      alt={alt}
-    />
+      <ImageSVG className={styles.icon} data-size={size} />
   );
 };

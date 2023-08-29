@@ -27,9 +27,8 @@ export const Link = ({
     >
       {iconArgs && (
         <Icon
-          alt={iconArgs.alt}
           size={iconArgs.size}
-          sourceIcon={iconArgs.sourceIcon}
+          source={iconArgs.source}
         />
       )}
       {content}

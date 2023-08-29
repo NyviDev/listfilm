@@ -41,9 +41,8 @@ export const Icon: Story = {
   args: {
     type: "icon",
     iconArgs: {
-      alt: "error",
-      size: "20",
-      sourceIcon: "/error.svg",
+      size: "normal",
+      source: "/error.svg",
     },
   },
 };
