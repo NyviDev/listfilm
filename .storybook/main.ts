@@ -2,7 +2,7 @@ import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  staticDirs: ['../public'],
+  staticDirs: ["../src/assets/", "../public/"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -10,10 +10,10 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
     {
-      name: '@storybook/addon-styling',
+      name: "@storybook/addon-styling",
       options: {
         sass: {
-          implementation: require('sass'),
+          implementation: require("sass"),
         },
       },
     },
@@ -24,6 +24,26 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  webpackFinal: async (config) => {
+    const imageRule = config.module?.rules?.find((rule) => {
+      const test = (rule as { test: RegExp }).test;
+
+      if (!test) {
+        return false;
+      }
+
+      return test.test(".svg");
+    }) as { [key: string]: any };
+
+    imageRule.exclude = /\.svg$/;
+
+    config.module?.rules?.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
   },
 };
 export default config;

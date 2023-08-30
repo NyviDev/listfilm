@@ -42,7 +42,7 @@ export const Icon: Story = {
     type: "icon",
     iconArgs: {
       size: "normal",
-      source: "/error.svg",
+      source: "error.svg",
     },
   },
 };
