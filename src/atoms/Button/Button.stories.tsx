@@ -27,6 +27,18 @@ export const IconWithStar: Story = {
     },
   },
 };
+export const Arrows: Story = {
+  name: "Arrow",
+  args: {
+    type: "icon",
+    content: "arrow left",
+    iconArgs: {
+      size: "normal",
+      source: "/arrow-left.svg",
+    },
+  },
+};
+
 export const Icon: Story = {
   args: {
     type: "icon",
