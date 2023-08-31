@@ -3,6 +3,8 @@ import styles from "./Icon.module.scss";
 import dynamic from "next/dynamic";
 export interface IconProps {
   source:
+    | "/arrow-left.svg"
+    | "/arrow-right.svg"
     | "/camera-movie.svg"
     | "/error.svg"
     | "/exit.svg"

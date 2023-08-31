@@ -9,11 +9,13 @@ interface ButtonProps {
 }
 
 export const Button = ({ content, type, iconArgs }: ButtonProps) => {
+  const coditionArrow = (iconArgs!.source !== "/arrow-left.svg") && (iconArgs!.source !== "/arrow-right.svg");
+  
   return (
-    <button className={styles.button} data-type={type}>
+    <button className={styles.button} data-type={type} data-default={coditionArrow}>
       {type == "icon" ? (
         <Icon
-          size={iconArgs!.size}
+          size={!coditionArrow ? "normal" : iconArgs!.size}
           source={iconArgs!.source}
         />
       ) : (

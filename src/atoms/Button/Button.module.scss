@@ -45,4 +45,13 @@
       background-color: $red-300;
     }
   }
+
+  &[data-type="icon"] {
+    &[data-default="false"] {
+      background-color: $red-500;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
