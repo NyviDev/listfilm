@@ -15,6 +15,7 @@ export interface IconProps {
     | "/star-white.svg"
     | "/success.svg";
   size: "small" | "normal" | "medium" | "large";
+  // fill?: "orange"
 }
 
 export const Icon = ({ source, size }: IconProps) => {
@@ -23,6 +24,12 @@ export const Icon = ({ source, size }: IconProps) => {
   );
 
   return (
-      <ImageSVG className={styles.icon} data-size={size} />
+    <>
+      {source == "/fill-star.svg" ? (
+        <ImageSVG className={styles.icon} data-size={size} data-star="true" />
+      ) : (
+        <ImageSVG className={styles.icon} data-size={size} />
+      )}
+    </>
   );
 };
