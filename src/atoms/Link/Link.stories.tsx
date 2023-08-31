@@ -53,7 +53,7 @@ export const ExternalIcon: Story = {
     href: "https://www.google.com",
     iconArgs: {
       size: "large",
-      source: "eye.svg",
+      source: "/eye.svg",
     },
   },
 };

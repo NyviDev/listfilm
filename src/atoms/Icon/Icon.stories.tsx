@@ -18,26 +18,26 @@ type Story = StoryObj<typeof Icon>;
 
 export const Small: Story = {
   args: {
-    source: "popcorn.svg",
+    source: "/popcorn.svg",
     size: "small",
   },
 };
 export const Normal: Story = {
   args: {
-    source: "fill-star.svg",
+    source: "/fill-star.svg",
     size: "normal",
   },
 };
 
 export const Medium: Story = {
   args: {
-    source: "popcorn-orange.svg",
+    source: "/popcorn-orange.svg",
     size: "medium",
   },
 };
 export const Large: Story = {
   args: {
-    source: "exit.svg",
+    source: "/exit.svg",
     size: "large",
   },
 };
