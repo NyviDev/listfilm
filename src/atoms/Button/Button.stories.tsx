@@ -16,6 +16,17 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+export const IconWithStar: Story = {
+  name: "Icon Star",
+  args: {
+    type: "icon",
+    content: "star",
+    iconArgs: {
+      size: "normal",
+      source: "/fill-star.svg",
+    },
+  },
+};
 export const Icon: Story = {
   args: {
     type: "icon",
