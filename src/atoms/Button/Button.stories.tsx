@@ -39,7 +39,6 @@ export const Icon: Story = {
 };
 
 export const Rate: Story = {
-  ...Icon,
   args: {
     type: "rate",
     content: "Avaliação",
