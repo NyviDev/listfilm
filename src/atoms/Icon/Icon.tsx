@@ -18,7 +18,10 @@ export interface IconProps {
   // fill?: "orange"
 }
 
-export const Icon = ({ source, size }: IconProps) => {
+export const Icon = ({
+  source,
+  size,
+}: IconProps) => {
   const ImageSVG: ComponentType<{ className: string }> = dynamic(
     () => import(`../../assets${source}`)
   );

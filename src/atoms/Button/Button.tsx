@@ -8,14 +8,18 @@ interface ButtonProps {
   iconArgs?: IconProps;
 }
 
-export const Button = ({ content, type, iconArgs }: ButtonProps) => {
+export const Button = ({
+  content = "Button",
+  type,
+  iconArgs = {
+    size: "normal",
+    source: "/camera-movie.svg",
+  },
+}: ButtonProps) => {
   return (
     <button className={styles.button} data-type={type}>
       {type == "icon" ? (
-        <Icon
-          size={iconArgs!.size}
-          source={iconArgs!.source}
-        />
+        <Icon size={iconArgs!.size} source={iconArgs!.source} />
       ) : (
         content
       )}

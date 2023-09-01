@@ -7,10 +7,10 @@ const meta: Meta<typeof Icon> = {
   parameters: {
     docs: {
       description: {
-        component: "Ícones utilizados no projeto"
-      }
-    }
-  }
+        component: "Ícones utilizados no projeto",
+      },
+    },
+  },
 };
 export default meta;
 
